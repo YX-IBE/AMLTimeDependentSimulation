@@ -2,6 +2,7 @@
 # Simulation study to explore the guarantee-time bias due to the wait for 
 # stem cell transplant (SCT) regarding the treatment effect of SCT on prognostic outcomes:
 # relapse (Rel) or overall survival (OS)
+# comment out one of the two lines (21&22) to switch the setting: line 21:table 1 (A), line 21: table 1(B)
 #
 library(survival)
 library(simsurv)
