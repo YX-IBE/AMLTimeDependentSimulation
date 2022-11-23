@@ -186,7 +186,8 @@ super.OS.rfc <- function(dat.simul = dat.simul,
     ind <- (LMdata$id == ii)
     xx <- LMdata[ind, ]
     t.relapse <- dat.simul$t.relapse[dat.simul$id == ii]
-    res <- ifelse(xx$LM + LM.horizon < t.relapse, 0, 1)
+    s.relapse <- dat.simul$s.relapse[dat.simul$id == ii]
+    res <- ifelse(xx$LM + LM.horizon >= t.relapse & s.relapse == 1, 1, 0)
     rel[ind] <- res
   }
   
